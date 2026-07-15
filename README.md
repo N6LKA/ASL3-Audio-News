@@ -1,14 +1,14 @@
-# allstar-ar-news
+# ASL3-Audio-News
 
 <table><tr>
 <td><img src="images/arrl-logo.jpg" height="120" alt="ARRL Audio News"></td>
 <td><img src="images/arn-logo.jpg" height="120" alt="Amateur Radio Newsline"></td>
 </tr></table>
 
-![Release Version](https://img.shields.io/github/v/release/N6LKA/allstar-ar-news?label=Version&color=f15d24)
-![Release Date](https://img.shields.io/github/release-date/N6LKA/allstar-ar-news?label=Released&color=f15d24)
-![Hits](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FN6LKA%2Fallstar-ar-news.json&label=Hits&color=f15d24)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/N6LKA/allstar-ar-news?label=Size&color=f15d24)
+![Release Version](https://img.shields.io/github/v/release/N6LKA/ASL3-Audio-News?label=Version&color=f15d24)
+![Release Date](https://img.shields.io/github/release-date/N6LKA/ASL3-Audio-News?label=Released&color=f15d24)
+![Hits](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FN6LKA%2FASL3-Audio-News.json&label=Hits&color=f15d24)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/N6LKA/ASL3-Audio-News?label=Size&color=f15d24)
 
 A bash script to play the **ARRL Audio News** or **Amateur Radio Newsline (ARN)** on an [ASL3](https://allstarlink.org/) repeater node. Rather than downloading and playing a local audio file, the script connects to the live AllStar news node in Monitor Only mode — allowing the repeater to break for proper IDs during playback instead of cutting at arbitrary points.
 
@@ -34,9 +34,9 @@ Includes 10-minute and 5-minute pre-announcements, QST announcements, automatic 
 - `asl3-tts` — required for QST announcement audio generation and optional TTS mode
   - Installed automatically by the installer if not present
 - `asl3-connection-log` — required for disconnect detection via `connectlog`
-  - See: [https://github.com/N6LKA/asl3-connection-log](https://github.com/N6LKA/asl3-connection-log)
+  - See: [https://github.com/N6LKA/ASL3-Connection-Log](https://github.com/N6LKA/ASL3-Connection-Log)
 - `asl3-link-activity-monitor` (optional) — if `LNKACTTIMER` is enabled in `ar-news.conf`
-  - See: [https://github.com/N6LKA/asl3-link-activity-monitor](https://github.com/N6LKA/asl3-link-activity-monitor)
+  - See: [https://github.com/N6LKA/ASL3-Link-Activity-Monitor](https://github.com/N6LKA/ASL3-Link-Activity-Monitor)
 
 ---
 
@@ -45,11 +45,11 @@ Includes 10-minute and 5-minute pre-announcements, QST announcements, automatic 
 Run the following command as root or with sudo for both fresh installs and updates:
 
 ```bash
-bash <(curl -fsSL -H "Cache-Control: no-cache" https://raw.githubusercontent.com/N6LKA/allstar-ar-news/master/install.sh)
+bash <(curl -fsSL -H "Cache-Control: no-cache" https://raw.githubusercontent.com/N6LKA/ASL3-Audio-News/main/install.sh)
 ```
 
 The installer will:
-- Check for a newer version of allstar-ar-news and notify you if one is available
+- Check for a newer version of ASL3-Audio-News and notify you if one is available
 - Check for and install `asl3-tts`, `asl3-link-activity-monitor`, and `asl3-connection-log` if missing
 - Prompt for your node number, callsign, and station type
 - Let you configure **one or more** scheduled news slots — each with its own news type, day, and time
@@ -85,7 +85,7 @@ Must be run as **root** or the **asterisk** user.
 # Show current playback status and upcoming schedule
 /etc/asterisk/scripts/ar-news/status.sh
 
-# Remove allstar-ar-news from the system
+# Remove ASL3-Audio-News from the system
 sudo /etc/asterisk/scripts/ar-news/uninstall.sh
 ```
 
@@ -242,7 +242,7 @@ It displays:
 
 ## Uninstalling
 
-To completely remove allstar-ar-news:
+To completely remove ASL3-Audio-News:
 
 ```bash
 sudo /etc/asterisk/scripts/ar-news/uninstall.sh
