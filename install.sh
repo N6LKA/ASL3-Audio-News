@@ -1,12 +1,12 @@
 #!/bin/bash
 # =============================================================================
-# install.sh - Installer for allstar-ar-news
-# https://github.com/N6LKA/allstar-ar-news
+# install.sh - Installer for ASL3-Audio-News
+# https://github.com/N6LKA/ASL3-Audio-News
 # =============================================================================
 
 VERSION="1.1.8"
 INSTALL_DIR="/etc/asterisk/scripts/ar-news"
-REPO="https://raw.githubusercontent.com/N6LKA/allstar-ar-news/master"
+REPO="https://raw.githubusercontent.com/N6LKA/ASL3-Audio-News/main"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -17,7 +17,7 @@ echo ""
 echo "=============================================="
 echo "  AllStar AR News Player - Installer"
 echo "  Version $VERSION"
-echo "  https://github.com/N6LKA/allstar-ar-news"
+echo "  https://github.com/N6LKA/ASL3-Audio-News"
 echo "=============================================="
 echo ""
 
@@ -79,7 +79,7 @@ if ! command -v lnkact &>/dev/null; then
         echo -e "${GREEN}asl3-link-activity-monitor installed.${NC}"
     else
         echo -e "${YELLOW}WARNING: Could not install asl3-link-activity-monitor.${NC}"
-        echo "         Install it manually: https://github.com/N6LKA/asl3-link-activity-monitor"
+        echo "         Install it manually: https://github.com/N6LKA/ASL3-Link-Activity-Monitor"
         echo "         Or set LNKACTTIMER=0 (or LNKACTTYPE=native) in ar-news.conf."
     fi
 else
@@ -88,14 +88,14 @@ fi
 
 if [[ ! -f "/etc/asterisk/scripts/conlog.sh" ]]; then
     echo "asl3-connection-log not found. Installing..."
-    _tmp=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/N6LKA/asl3-connection-log/main/install.sh -o "$_tmp" && bash "$_tmp"; _rc=$?; rm -f "$_tmp"
+    _tmp=$(mktemp) && curl -fsSL https://raw.githubusercontent.com/N6LKA/ASL3-Connection-Log/main/install.sh -o "$_tmp" && bash "$_tmp"; _rc=$?; rm -f "$_tmp"
     if [[ $_rc -eq 0 ]]; then
         echo -e "${GREEN}asl3-connection-log installed.${NC}"
     else
         echo -e "${RED}ERROR: Could not install asl3-connection-log.${NC}"
         echo "       This package is required — play_news.sh depends on its log format"
         echo "       to detect when the news node disconnects."
-        echo "       Install it manually: https://github.com/N6LKA/asl3-connection-log"
+        echo "       Install it manually: https://github.com/N6LKA/ASL3-Connection-Log"
         exit 1
     fi
 else
