@@ -1,7 +1,7 @@
 #!/bin/bash
 # cancel_news.sh - Emergency cancellation of ARRL/ARN news playback on an ASL3 node.
 # Copyright (c) 2026 Larry K. Aycock (N6LKA)
-# https://github.com/N6LKA/allstar-ar-news
+# https://github.com/N6LKA/ASL3-Audio-News
 #
 # Usage: cancel_news.sh <NodeNumber>
 #
