@@ -1,7 +1,7 @@
 #!/bin/bash
 # test_audio.sh - Test TTS playback of a transcript file on the local node.
 # Copyright (c) 2026 Larry K. Aycock (N6LKA)
-# https://github.com/N6LKA/allstar-ar-news
+# https://github.com/N6LKA/ASL3-Audio-News
 #
 # Reads the specified .txt transcript file and plays it immediately on your
 # local node using asl-tts. Use this to hear how an announcement sounds
